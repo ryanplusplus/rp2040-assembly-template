@@ -1,5 +1,3 @@
-SVD := lib/pico-sdk/src/rp2040/hardware_regs/rp2040.svd
-DEBUG_CFG := tools/debug.cfg
 PICO_PLATFORM := rp2040
 PICO_BOARD := adafruit_feather_rp2040
 PICO_COMPILER := pico_arm_gcc
@@ -21,6 +19,7 @@ BUILD_TYPE := debug
 endif
 
 BUILD_DIR := build/$(BUILD_TYPE)
+SVD := $(BUILD_DIR)/_deps/pico_sdk-src/src/rp2040/hardware_regs/rp2040.svd
 
 export GNUMAKEFLAGS := --no-print-directory
 
